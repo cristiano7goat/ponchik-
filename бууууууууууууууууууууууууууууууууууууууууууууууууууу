@@ -1,0 +1,26 @@
+import turtle
+t = turtle.Turtle()
+t.shape()
+t.width(5)
+t.speed(0)
+
+xTank, yTank = -200, 0
+
+def katok(x, y):
+    t.goto(x, y)
+    t.circle(50)
+ 
+t.penup()
+t.goto(xTank, yTank)
+t.pendown()
+
+for xTank in range(-200, 300, 100):
+    katok(xTank, yTank)
+
+xTank, yTank = -200, 0
+t.penup()
+t.goto(xTank+400, yTank+100)
+t.pendown()
+t.goto(xTank, yTank+100)
+
+turtle.done()
